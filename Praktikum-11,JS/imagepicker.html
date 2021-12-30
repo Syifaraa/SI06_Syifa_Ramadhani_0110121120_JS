@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker - Syifa Ramadhani</title>
+    <script>
+        function Pilih() {
+            var a = document.getElementById('gambar').value;
+
+            if (a == "kucing") {
+                document.getElementById("pick").innerHTML = '<img class="foto" src="img/kucing.jpg">'
+                window.alert("Ini adalah gambar " + a)
+            }
+            if (a == "kelinci") {
+                document.getElementById("pick").innerHTML = '<img class="foto" src="img/kelinci.jpg">'
+                window.alert("Ini adalah gambar " + a)
+            }
+            if (a == "panda") {
+                document.getElementById("pick").innerHTML = '<img class="foto" src="img/panda.jpg">'
+                window.alert("Ini adalah gambar " + a)
+            }
+            if (a == "koala") {
+                document.getElementById("pick").innerHTML = '<img class="foto" src="img/koala.jpg">'
+                window.alert("Ini adalah gambar " + a)
+            }
+            if (a == "anjing") {
+                document.getElementById("pick").innerHTML = '<img class="foto" src="img/anjing.jpg">'
+                window.alert("Ini adalah gambar " + a)
+            }
+        }
+    </script>
+    <style>
+        .foto{
+            width: 35%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Image Picker</h2>
+    <select id="gambar" onchange="Pilih()">
+        <option value="kucing">Kucing</option>
+        <option value="panda">Panda</option>
+        <option value="koala">Koala</option>
+        <option value="kelinci">Kelinci</option>
+        <option value="anjing">Anjing</option>
+    </select>
+    <div id="pick"></div>
+</body>
+</html>

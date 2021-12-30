@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chat - Syifa Ramadhani</title>
+    <style>
+        .kotak{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        function kirimpesan(){
+            let isipesan = document.getElementById("isipesan").value;
+            document.getElementById("kotak").innerHTML += isipesan + "<br/>";
+        }
+    </script>
+</head>
+<body>
+    <h2>Chat Message</h2>
+    <div class="pojokkanan">
+        <div class="kotak" id="kotak">
+        </div>
+        <input type="text" id="isipesan">
+        <input type="submit" value="kirim" onclick="kirimpesan()">
+    </div>
+</body>
+</html>

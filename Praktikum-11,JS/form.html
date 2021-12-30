@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation - Syifa Ramadhani</title>
+    <style>
+        span{
+            visibility: hidden;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Validation</h2>
+    Nama : <input type="text" id="nama" placeholder="Syifa Ramadhani"><br>
+    <span>Nama Tidak Valid</span><br>
+    <br>
+    Email : <input type="email" id="email" placeholder="syifa@gmail.com"><br>
+    <span>Email Tidak Valid</span><br>
+    <br>
+    Jam : <input type="time" id="jam" placeholder="07:30"><br>
+    <span>Jam Harus Diisi</span><br>
+    <br>
+    Tujuan : <input type="text" id="tujuan" placeholder="Bandung"><br>
+    <span>Tujuan Tidak Valid</span><br>
+    <br>
+    Jumlah Tiket : <input type="number" id="tiket" placeholder="3">
+    <span>Jumlah Tiket Tidak Valid</span><br>
+    <br>
+    <button onclick="cek()">Submit</button>
+    
+    <div>
+        <p id="ceknama"></p>
+        <p id="cekemail"></p>
+        <p id="cekjam"></p>
+        <p id="cektujuan"></p>
+        <p id="cektiket"></p>
+    </div>
+    <script>
+        let nama = document.getElementById("nama");
+        let email = document.getElementById("email");
+        let jam = document.getElementById("jam");
+        let tujuan = document.getElementById("tujuan");
+        let tiket = document.getElementById("tiket");
+        let span = document.getElementsByTagName("span");
+    
+        function cek() {
+            if (nama.value != "Syifa Ramadhani" || nama.value.length >= 30 ) {
+                span[0].style.visibility = "visible";
+            }
+            if (nama.value == "Syifa Ramadhani") {
+                document.getElementById("ceknama").innerHTML = "Nama : " + nama.value;
+            }
+    
+            if (email.value != "syifa@gmail.com") {
+                span[1].style.visibility = "visible";
+            }
+            if (email.value == "syifa@gmail.com") {
+                document.getElementById("cekemail").innerHTML = "Email : " + email.value;
+            }
+    
+            if (jam.value == "" ) {
+                span[2].style.visibility = "visible";
+            }
+            else {
+                document.getElementById("cekjam").innerHTML = "Jam Keberangkatan : " + jam.value;
+            }
+    
+            if (tujuan.value != "Bandung") {
+                span[3].style.visibility = "visible";
+            }
+            if (tujuan.value == "Bandung") {
+                document.getElementById("cektujuan").innerHTML = "Tujuan : " + tujuan.value;
+            }
+    
+            if (tiket.value != "3") {
+                span[4].style.visibility = "visible";
+            }
+            if (tiket.value == "3"){
+                document.getElementById("cektiket").innerHTML = "Jumlah Tiket : " + tiket.value;
+            }
+        }
+    </script>
+</body>
+</html>
